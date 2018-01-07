@@ -29,7 +29,7 @@ class AddCardView extends React.Component {
         <TouchableOpacity onPress={() => {
           this.props.dispatch(addDeck({ [this.state.title]: { title: this.state.title, cards:[]} }));
           return this.props.navigation.navigate(
-                              'Home');
+                              'IndividualDeckView', { deck: { title: this.state.title, cards:[]}});
         }} style={styles.box}>
           <Text>Submit</Text>
         </TouchableOpacity>

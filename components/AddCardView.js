@@ -40,7 +40,7 @@ class AddCardView extends React.Component {
           this.props[this.state.title].cards.push({ question: this.state.question, answer: this.state.answer });
           this.props.dispatch(updateDeck({ [this.state.title]: this.props[this.state.title] }))
           return this.props.navigation.navigate(
-                              'Home');
+                              'IndividualDeckView', { deck: this.props[this.state.title] });
         }} style={styles.box}>
           <Text>Submit</Text>
         </TouchableOpacity>
